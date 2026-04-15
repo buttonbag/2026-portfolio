@@ -23,6 +23,30 @@ const work = [
     description: "Led the complete redesign of a major e-commerce platform serving over 1M users. Improved conversion rates by 35% and reduced page load times by 50%.", 
     image: "Project Image"
   },
+  {
+    id: 4,
+    name: "Email campaigns", 
+    date: 2026, 
+    tech_stack: ["HTML", "CSS", "Photoshop"], 
+    description: "Led the complete redesign of a major e-commerce platform serving over 1M users. Improved conversion rates by 35% and reduced page load times by 50%.", 
+    image: "Project Image"
+  },
+  {
+    id: 5,
+    name: "Email campaigns", 
+    date: 2026, 
+    tech_stack: ["HTML", "CSS", "Photoshop"], 
+    description: "Led the complete redesign of a major e-commerce platform serving over 1M users. Improved conversion rates by 35% and reduced page load times by 50%.", 
+    image: "Project Image"
+  },
+  {
+    id: 6,
+    name: "Email campaigns", 
+    date: 2026, 
+    tech_stack: ["HTML", "CSS", "Photoshop"], 
+    description: "Led the complete redesign of a major e-commerce platform serving over 1M users. Improved conversion rates by 35% and reduced page load times by 50%.", 
+    image: "Project Image"
+  },
 ]
 
 export default work
