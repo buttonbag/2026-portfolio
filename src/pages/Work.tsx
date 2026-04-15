@@ -3,8 +3,9 @@ import CardContent from "@mui/material/CardContent";
 import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Grid";
 import work from "../content/work"
+import { Link } from 'react-router';
 
-export function Work() {
+function Work() {
   return (
 		<div className="py-8 md:py-16 px-4 md:px-8">
 			<div className="max-w-4xl mx-auto">
@@ -24,25 +25,25 @@ export function Work() {
           <CssBaseline />
 					<Grid container direction="row" spacing={{ xs: 2, md: 3 }}>
 						{work.map((w) => (
-							<Grid size={{ sm: 12, md: 4 }}>
-								<Card>
-									<CardContent>
-										<h3 className="text-xl font-medium mb-2">{w.name}</h3>
-										<p className="text-sm text-gray-600 mb-3">
-											2026 • React 19, TypeScript, React Router 7, Postgres
-										</p>
-										<p className="mb-6 leading-relaxed">
-											Led the complete redesign of a major e-commerce platform
-											serving over 1M users. Improved conversion rates by 35%
-											and reduced page load times by 50%.
-										</p>
-										<div className="border border-gray-300 aspect-video flex items-center justify-center bg-gray-50">
-											<span className="text-sm text-gray-500">
-												Project Image
-											</span>
-										</div>
-									</CardContent>
+							<Grid size={{ sm: 12, md: 4 }} key={w.id}>
+								<Link to={"/work/"+w.id}>
+								<Card >
+									{/* <CardActionArea> */}
+										<CardContent>
+											<h3 className="text-xl font-medium mb-2">{w.name}</h3>
+											<p className="text-sm text-gray-600 mb-3">
+												{w.date} 
+											</p>
+												{w.tech_stack}
+											<div className="border border-gray-300 aspect-video flex items-center justify-center bg-gray-50">
+												<span className="text-sm text-gray-500">
+													Project Image
+												</span>
+											</div>
+										</CardContent>
+									{/* </CardActionArea> */}
 								</Card>
+								</Link>
 							</Grid>
 						))}
 					</Grid>

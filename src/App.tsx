@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router"
 import Home from "./pages/Home"
 import Work from "./pages/Work"
 import Contact from "./pages/Contact"
+import WorkDetails from "./pages/WorkDetails"
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route index path="/" element={<Home/>}/> 
           <Route path="/work" element={<Work />}/> 
+          <Route path="/work/:workId" element={<WorkDetails />}/> 
           <Route path="/contact" element={<Contact />}/> 
         </Routes>
         
