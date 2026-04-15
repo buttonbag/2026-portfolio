@@ -1,6 +1,5 @@
 import { Link, useParams } from 'react-router';
 import work from "../content/work"
-// import { useEffect } from 'react';
 
 
 function WorkDetails() {
