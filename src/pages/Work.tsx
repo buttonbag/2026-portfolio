@@ -1,4 +1,7 @@
-import { Card, CardContent, CssBaseline, Grid } from "@mui/material";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CssBaseline from "@mui/material/CssBaseline";
+import Grid from "@mui/material/Grid";
 import work from "../content/work"
 
 export function Work() {

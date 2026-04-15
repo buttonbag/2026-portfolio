@@ -1,4 +1,7 @@
-import { Card, CardContent, CssBaseline, Grid } from "@mui/material";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CssBaseline from "@mui/material/CssBaseline";
+import Grid from "@mui/material/Grid";
 import experience from "../content/experience"
 
 function Home() {
@@ -47,7 +50,7 @@ function Home() {
 										<div className="col-span-12 md:col-span-9">
 											<h3 className="font-medium mb-1">{e.title}</h3>
 											<p className="text-sm text-gray-600 mb-3">{e.company}</p>
-											<ul className="space-y-2 text-sm leading-relaxed">
+											<ul className="text-sm leading-relaxed">
                         {(e.bullet).map((item)=>(
                           <li key={item}>{item}</li>
                         ))}
@@ -65,7 +68,7 @@ function Home() {
 					<h2 className="text-xs uppercase tracking-widest mb-6 text-gray-600">
 						Project Highlights
 					</h2>
-					<div className="space-y-6">
+					<div className="">
 						<div>
 							<h3 className="font-medium mb-2">Project Name 1</h3>
 							<p className="text-sm leading-relaxed text-gray-600">
@@ -113,7 +116,7 @@ function Home() {
 					<h2 className="text-xs uppercase tracking-widest mb-6 text-gray-600">
 						Skills
 					</h2>
-					<div className="space-y-6">
+					<div className="">
 						<div className="grid grid-cols-12 gap-x-8">
 							<div className="col-span-12 md:col-span-3">
 								<h3 className="text-sm font-medium">Technical</h3>
