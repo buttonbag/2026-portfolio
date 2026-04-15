@@ -1,8 +1,18 @@
 import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Grid";
-import Experience from "../components/Experience"
+import Experience from "../components/Experience";
+import work from "../content/work";
+
 
 function Home() {
+	
+	
+	const featured = (WORK_ID:number) => {
+		return (
+			work.find((w)=>(w.id === WORK_ID))
+		);
+	};
+
   return (
 		<div className="py-8 md:py-16 px-4 md:px-8">
 			<div className="max-w-4xl mx-auto">
@@ -21,6 +31,7 @@ function Home() {
 
 				{/* Profile */}
 				<section className="mb-12">
+					{/* {featured.find((w)=>(w.id === 1))} */}
 					<h2 className="text-xs uppercase tracking-widest mb-4 text-gray-600">
 						Profile
 					</h2>
@@ -49,27 +60,21 @@ function Home() {
 					</h2>
 					<div className="">
 						<div>
-							<h3 className="font-medium mb-2">Project Name 1</h3>
+							<h3 className="font-medium mb-2">{featured(1)?.name}</h3>
 							<p className="text-sm leading-relaxed text-gray-600">
-								Brief description of the project, technologies used, and
-								outcomes achieved.
-							</p>
-						</div>
-						<div>
-							<h3 className="font-medium mb-2">Project Name 2</h3>
-							<p className="text-sm leading-relaxed text-gray-600">
-								Brief description of the project, technologies used, and
-								outcomes achieved.
-							</p>
-						</div>
-						<div>
-							<h3 className="font-medium mb-2">Project Name 3</h3>
-							<p className="text-sm leading-relaxed text-gray-600">
-								Brief description of the project, technologies used, and
-								outcomes achieved.
+								{featured(1)?.description}
 							</p>
 						</div>
 					</div>
+					<div className="">
+						<div>
+							<h3 className="font-medium mb-2">{featured(5)?.name}</h3>
+							<p className="text-sm leading-relaxed text-gray-600">
+								{featured(5)?.description}
+							</p>
+						</div>
+					</div>
+
 				</section>
 
 				{/* Education */}
