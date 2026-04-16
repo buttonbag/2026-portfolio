@@ -15,13 +15,14 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router';
+import { Container, type alignItems, type justifyContent, type textAlign } from '@mui/system';
 
 interface Props {
   window?: () => Window;
 }
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Work', 'Contact'];
+const navItems = ['Home', 'About', 'Work'];
 
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
@@ -33,10 +34,10 @@ export default function DrawerAppBar(props: Props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
+      {/* <Typography variant="h6" sx={{ my: 2 }}>
         Drawer 💼
       </Typography>
-      <Divider />
+      <Divider /> */}
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
@@ -55,7 +56,8 @@ export default function DrawerAppBar(props: Props) {
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar component="nav" position='fixed'>
-        <Toolbar>
+        <Container maxWidth="lg">
+        <Toolbar disableGutters >
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -65,13 +67,13 @@ export default function DrawerAppBar(props: Props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
+          {/* <Typography
             variant="h6"
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
             PORTFOLIO 💼
-          </Typography>
+          </Typography> */}
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
               
@@ -84,6 +86,7 @@ export default function DrawerAppBar(props: Props) {
             ))}
           </Box>
         </Toolbar>
+        </Container>
       </AppBar>
         <Toolbar/>
       <nav>
