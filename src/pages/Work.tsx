@@ -1,35 +1,36 @@
 import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Grid";
 import WorkData from "../components/Work"
+import { Box, Typography } from "@mui/material";
 
 function Work() {
   return (
-		<div className="py-8 md:py-16 px-4 md:px-8">
+		<Box sx={{py:8}}>
+			<CssBaseline />
 			<div className="max-w-4xl mx-auto">
 				{/* Header */}
 				<div className="mb-12 pb-8 border-b border-black">
-					<h1 className="text-4xl md:text-5xl font-normal tracking-tight">
+					<Typography variant="h1">
 						Work
-					</h1>
+					</Typography>
 				</div>
 
 				{/* Professional Projects */}
-				<section className="mb-16">
-					<h2 className="text-xs uppercase tracking-widest mb-8 text-gray-600">
+				<Box component="section" sx={{my:12}}>
+					<Typography variant="h2">
 						Professional Projects
-					</h2>
+					</Typography>
 					
-          <CssBaseline />
 					<Grid container direction="row" spacing={{ xs: 2, md: 3 }}>
 						<WorkData />
 					</Grid>
-				</section>
+				</Box>
 
 				{/* Video Presentations */}
 				<section className="mb-16">
-					<h2 className="text-xs uppercase tracking-widest mb-8 text-gray-600">
+					<Typography variant="h2">
 						Video Presentations
-					</h2>
+					</Typography>
 
 					<div className="space-y-12">
 						{/* Video 1 */}
@@ -50,7 +51,7 @@ function Work() {
 					</div>
 				</section>
 			</div>
-		</div>
+		</Box>
 	);
 }
 

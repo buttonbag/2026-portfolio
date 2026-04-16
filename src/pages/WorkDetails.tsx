@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router';
 import work from "../content/work"
+import { Button } from '@mui/material';
 
 
 function WorkDetails() {
@@ -9,7 +10,7 @@ function WorkDetails() {
   return (
 		<div className="py-8 md:py-16 px-4 md:px-8">
 			<div className="max-w-4xl mx-auto">
-			<Link to={"/work"}>&lt; back</Link>
+			<Button component={Link} to={"/work"}>&lt; back</Button>
 				{/* Header */}
 				<div className="mb-12 pb-8 border-b border-black">
 					<h1 className="text-4xl md:text-5xl font-normal tracking-tight">

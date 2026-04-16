@@ -2,6 +2,8 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Grid";
 import Experience from "../components/Experience";
 import work from "../content/work";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 
 
 function Home() {
@@ -14,53 +16,51 @@ function Home() {
 	};
 
   return (
-		<div className="py-8 md:py-16 px-4 md:px-8">
+		<Box sx={{py:8}}>
+			<CssBaseline />
 			<div className="max-w-4xl mx-auto">
 				{/* Header */}
 				<header className="mb-16 pb-8 border-b border-black">
-					<h1 className="text-5xl md:text-6xl font-normal tracking-tight mb-4">
+					{/* <h1 className="text-5xl md:text-6xl font-normal tracking-tight mb-4"> */}
+					<Typography variant="h1">
 						Your Name
-					</h1>
+					</Typography>
 
 					<div className="flex flex-wrap gap-x-6 gap-y-1 text-sm mt-4">
-						<>
 							<span>linkedin.com/in/yourname</span>
-						</>
 					</div>
 				</header>
 
 				{/* Profile */}
-				<section className="mb-12">
-					{/* {featured.find((w)=>(w.id === 1))} */}
-					<h2 className="text-xs uppercase tracking-widest mb-4 text-gray-600">
+				<Box component="section" sx={{my:12}}>
+					<Typography variant="h2">
 						Profile
-					</h2>
+					</Typography>
 					<p className="text-base leading-relaxed max-w-3xl">
 						Brief professional summary highlighting your key strengths,
 						experience, and career objectives. Keep this concise and
 						impactful—two to three sentences maximum.
 					</p>
-				</section>
+				</Box>
 
 				{/* Experience */}
-				<h2 className="text-xs uppercase tracking-widest mb-6 text-gray-600">
+				<Typography variant="h2">
 					Experience
-				</h2>
-				<section className="mb-12">
-					<CssBaseline />
+				</Typography>
+				<Box component="section" sx={{my:12}}>
 					<Grid container spacing={{ xs: 2, md: 3 }}>
 						<Experience />
 					</Grid>
-				</section>
+				</Box>
 
 				{/* Project Highlights */}
-				<section className="mb-12">
-					<h2 className="text-xs uppercase tracking-widest mb-6 text-gray-600">
+				<Box component="section" sx={{my:12}}>
+					<Typography variant="h2">
 						Project Highlights
-					</h2>
+					</Typography>
 					<div className="">
 						<div>
-							<h3 className="font-medium mb-2">{featured(1)?.name}</h3>
+							<Typography variant="h3">{featured(1)?.name}</Typography>
 							<p className="text-sm leading-relaxed text-gray-600">
 								{featured(1)?.description}
 							</p>
@@ -68,20 +68,19 @@ function Home() {
 					</div>
 					<div className="">
 						<div>
-							<h3 className="font-medium mb-2">{featured(5)?.name}</h3>
+							<Typography variant="h3">{featured(5)?.name}</Typography>
 							<p className="text-sm leading-relaxed text-gray-600">
 								{featured(5)?.description}
 							</p>
 						</div>
 					</div>
-
-				</section>
+				</Box>
 
 				{/* Education */}
-				<section className="mb-12">
-					<h2 className="text-xs uppercase tracking-widest mb-6 text-gray-600">
+				<Box component="section" sx={{my:12}}>
+					<Typography variant="h2">
 						Education
-					</h2>
+					</Typography>
 					<div className="grid grid-cols-12 gap-x-8">
 						<div className="col-span-12 md:col-span-3">
 							<p className="text-sm text-gray-600">2010—2014</p>
@@ -93,13 +92,13 @@ function Home() {
 							<p className="text-sm text-gray-600">University Name</p>
 						</div>
 					</div>
-				</section>
+				</Box>
 
 				{/* Skills */}
-				<section className="mb-12">
-					<h2 className="text-xs uppercase tracking-widest mb-6 text-gray-600">
+				<Box component="section" sx={{my:12}}>
+					<Typography variant="h2">
 						Skills
-					</h2>
+					</Typography>
 					<div className="">
 						<div className="grid grid-cols-12 gap-x-8">
 							<div className="col-span-12 md:col-span-3">
@@ -122,9 +121,9 @@ function Home() {
 							</div>
 						</div>
 					</div>
-				</section>
+				</Box>
 			</div>
-		</div>
+		</Box>
 	);
 }
 

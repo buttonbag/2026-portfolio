@@ -2,6 +2,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Grid from "@mui/material/Grid";
 import experience from "../content/experience"
+import { Chip, Typography } from "@mui/material";
 
 function Experience() {
   return (
@@ -10,12 +11,10 @@ function Experience() {
       <Grid size={{ sm: 12, md: 4 }} key={e.id}>
         <Card>
           <CardContent>
-            <div className="col-span-12 md:col-span-3">
-              <p className="text-sm text-gray-600">{e.date}</p>
-            </div>
+              <Chip variant="outlined" size="small" label={e.date}/>
             <div className="col-span-12 md:col-span-9">
-              <h3 className="font-medium mb-1">{e.title}</h3>
-              <p className="text-sm text-gray-600 mb-3">{e.company}</p>
+              <Typography variant="h4">{e.title}</Typography>
+              <Typography variant="body1">{e.company}</Typography>
               <ul className="text-sm leading-relaxed">
                 {(e.bullet).map((item)=>(
                   <li key={item}>{item}</li>
