@@ -1,8 +1,9 @@
-import Header from "./components/Header"
-import CssBaseline from "@mui/material/CssBaseline"
-import { ThemeProvider } from "@mui/material/styles"
-import Container from "@mui/material/Container"
 import { Route, Routes } from "react-router"
+import { ThemeProvider } from "@mui/material/styles"
+import CssBaseline from "@mui/material/CssBaseline"
+
+import Header from "./components/Header"
+import Container from "@mui/material/Container"
 import Home from "./pages/Home"
 import Work from "./pages/Work"
 import Contact from "./pages/Contact"
@@ -14,7 +15,6 @@ import About from "./pages/About"
 function App() {
   
   return (
-
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container>
