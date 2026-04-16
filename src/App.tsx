@@ -8,6 +8,7 @@ import Work from "./pages/Work"
 import Contact from "./pages/Contact"
 import WorkDetails from "./pages/WorkDetails"
 import theme from "./theme"
+import About from "./pages/About"
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
 
         <Routes>
           <Route index path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/work" element={<Work />} />
           <Route path="/work/:workId" element={<WorkDetails />} />
           <Route path="/contact" element={<Contact />} />
